@@ -23,7 +23,6 @@ class registration(forms.ModelForm):
             raise forms.ValidationError("Name should be smaller than 70")
         elif not name.isalnum():
             raise forms.ValidationError("Name Should be letter or number")
-        
         return name 
     
     def clean_password(self):
@@ -34,7 +33,5 @@ class registration(forms.ModelForm):
             raise forms.ValidationError("Password should be greater than 4")
         elif len(password)>70:
             raise forms.ValidationError("Password should be smaller than 70")
-        
-        
         return password 
     
